@@ -1006,7 +1006,7 @@ class Seq2SeqModel:
                 "input_ids": source_ids.to(device),
                 "attention_mask": source_mask.to(device),
                 "decoder_input_ids": y_ids.to(device),
-                "lm_labels": lm_labels.to(device),
+                "labels": lm_labels.to(device),
             }
         else:
             lm_labels = batch[1]
